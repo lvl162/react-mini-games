@@ -29,9 +29,7 @@ const App: React.FC = () => {
             </Link>
           ))}
         </div> : null}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
     </div>
   );
