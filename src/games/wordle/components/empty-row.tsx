@@ -1,8 +1,8 @@
-import { wordOfDay } from '../lib'
-import { Cell } from './cell'
+import { wordOfDay } from "../lib";
+import { Cell } from "./cell";
 
 export const EmptyRow = () => {
-  const emptyCells = Array.from(Array(wordOfDay.length))
+  const emptyCells = Array.from(Array(wordOfDay.length));
 
   return (
     <div className="mb-1 flex justify-center">
@@ -10,5 +10,5 @@ export const EmptyRow = () => {
         <Cell key={i} />
       ))}
     </div>
-  )
-}
+  );
+};

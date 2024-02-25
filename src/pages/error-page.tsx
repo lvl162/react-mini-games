@@ -6,8 +6,7 @@ export function ErrorPage() {
   if (isRouteErrorResponse(error)) {
     if (error.status === 401) {
       // ...
-    }
-    else if (error.status === 404) {
+    } else if (error.status === 404) {
       // ...
     }
 
