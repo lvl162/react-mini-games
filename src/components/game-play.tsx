@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import BackToHomeButton from './button/home';
-import { GameContext } from '../main';
-import Grid from '../games/wordle/components';
 import Wordle from '../games/wordle';
+import { GameContext } from '../main';
+import BackToHomeButton from './button/home';
 
 
 const GamePlay: React.FC = () => {

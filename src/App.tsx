@@ -1,8 +1,7 @@
 // App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, useLocation, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import GameCard from './components/game-card';
-import GamePlay from './components/game-play'; // Create GamePlay component
 
 const gamesData = [
   { id: 1, title: 'Game 1', icon: '🎮' },
