@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
-import Wordle from "../games/wordle";
-import { GameContext } from "../main";
-import BackToHomeButton from "./button/home";
+import React, { useContext, useEffect } from 'react';
+import { useOutletContext, useParams } from 'react-router-dom';
+import Wordle from '../games/wordle';
+import { GameContext } from '../main';
+import { ContextType } from '../App';
 
 const GamePlay: React.FC = () => {
+  const { setTitle } = useOutletContext<ContextType>();
+
   const { id: gameId } = useParams<{ id: string }>();
-  const { gamesData, user } = useContext(GameContext);
+  const { gamesData } = useContext(GameContext);
   const thisGame = gamesData.filter(({ id }) => String(id) === gameId);
   const isGameExists = thisGame.length > 0;
   if (!isGameExists) {
@@ -14,12 +16,11 @@ const GamePlay: React.FC = () => {
   }
 
   const { title } = thisGame[0];
+  useEffect(() => {
+    setTitle(title);
+  }, []);
   return (
     <div>
-      <BackToHomeButton />
-      <p>
-        {user.name} is playing game {title}
-      </p>
       <Wordle />
     </div>
   );

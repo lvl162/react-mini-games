@@ -1,5 +1,5 @@
-import { wordOfDay } from "../lib";
-import { Cell } from "./cell";
+import { wordOfDay } from '../lib';
+import { Cell } from './cell';
 
 export const EmptyRow = () => {
   const emptyCells = Array.from(Array(wordOfDay.length));

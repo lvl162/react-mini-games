@@ -1,5 +1,5 @@
-import { wordOfDay, unicodeSplit } from "../lib";
-import { Cell } from "./cell";
+import { wordOfDay, unicodeSplit } from '../lib';
+import { Cell } from './cell';
 
 type Props = {
   guess: string;
